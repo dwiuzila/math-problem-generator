@@ -19,7 +19,6 @@ def set_png_as_page_bg(png_file):
     </style>
     ''' % bin_str
     st.markdown(page_bg_img, unsafe_allow_html=True)
-    return
 
 set_png_as_page_bg('background.png')
 
@@ -34,9 +33,10 @@ if st.button('Bring it on!'):
     name = choice.index.values[0]
     link = choice.iloc[0, 0]
     prob = choice.iloc[0, 1]
-    st.markdown(f'### {name}')
+    st.info(f'### {name}')
     st.write(prob)
     st.caption(f'[source]({link})')
+    st.markdown('---')
     st.markdown("""
     <a href="https://www.buymeacoffee.com/geoclid" target="_blank">
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
