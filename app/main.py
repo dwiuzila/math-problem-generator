@@ -12,7 +12,7 @@ if 'prob_click' not in ss:
 if st.button('Bring it on!'):
     ss['prob_click'] = True
     ss['report_click'] = False
-    df = pd.read_csv('olympiad-problems.csv')
+    df = pd.read_csv('data/olympiad-problems.csv')
     choice = df.sample(1)
     ss['sample'] = choice
     body(choice)
