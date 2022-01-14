@@ -38,7 +38,7 @@ def set_bg(png_file):
 
 def head():
     st.markdown("<h1 style='text-align: center; margin-bottom: -35px;'>Math Problem Generator</h1>", unsafe_allow_html=True)
-    st.caption("<p style='text-align: center'>by Geoclid</p>", unsafe_allow_html=True)
+    st.caption("<p style='text-align: center'>by <a href='https://medium.com/geoclid'>Geoclid</a></p>", unsafe_allow_html=True)
     st.write("Feeling overwhelmed by your daily grind? Looking for something fun to do? Click the button for a random math problem \U0001F642.")
 
 def body(sample):
