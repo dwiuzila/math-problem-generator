@@ -3,7 +3,7 @@ import streamlit as st
 from utils import set_bg, head, body, footer
 
 ss = st.session_state
-set_bg('background.png')
+set_bg('assets/background.png')
 head()
 
 if 'prob_click' not in ss:
