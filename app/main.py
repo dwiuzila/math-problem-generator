@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from app.utils import set_bg, head, body, footer
+from utils import set_bg, head, body, footer
 
 ss = st.session_state
 set_bg('background.png')
