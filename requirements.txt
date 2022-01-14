@@ -1,3 +1,4 @@
 pandas
 streamlit
+google-auth-oauthlib
 google-cloud-firestore
