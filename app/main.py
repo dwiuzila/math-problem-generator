@@ -1,3 +1,5 @@
+"""Main program for the streamlit app"""
+
 import streamlit as st
 from utils import set_bg, head, body, footer, read_data
 
