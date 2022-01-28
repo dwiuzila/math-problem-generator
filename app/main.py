@@ -3,6 +3,8 @@
 import streamlit as st
 from utils import set_bg, head, body, footer, read_data
 
+st.set_page_config(page_title='Math Problem Generator', page_icon='assets/icon.png')
+
 ss = st.session_state
 set_bg('assets/background.png')
 head()
