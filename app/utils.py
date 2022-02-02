@@ -50,10 +50,10 @@ def body(sample):
     st.caption(f'[source]({link})')
     st.markdown('---')
 
-def footer(session_state):
+def footer(sample):
     st.caption("Support us by either reporting this problem for bad $\LaTeX$ formatting or buying a coffee!")
     col1, col2 = st.columns([1,8])
-    col1.button('Report', on_click=report, args=(session_state, ))
+    col1.button('Report', on_click=report, args=(sample, ))
     col2.markdown("""
         <a href="https://www.buymeacoffee.com/geoclid" target="_blank">
         <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
@@ -63,7 +63,7 @@ def footer(session_state):
         </a>
     """, unsafe_allow_html=True)
 
-def report(session_state):
+def report(sample):
     # Authenticate to Firestore with the JSON account key.
     key_dict = json.loads(st.secrets['textkey'])
     creds = service_account.Credentials.from_service_account_info(key_dict)
@@ -73,6 +73,5 @@ def report(session_state):
     doc_ref = db.collection('defect').document(str(datetime.now()))
 
     # And then uploading some data to that reference
-    idx = session_state['sample'].index.item()
+    idx = sample.index.item()
     doc_ref.set({'id': idx, 'status': True})
-    session_state['report_click'] = True
