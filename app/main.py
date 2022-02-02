@@ -22,6 +22,6 @@ if st.button('Bring it on!'):
 
 if ss['prob_click'] and ss['report_click']:
     body(ss['sample'])
-    footer()
+    footer(ss)
 elif ss['prob_click']:
-    footer()
+    footer(ss)
